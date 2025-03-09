@@ -3,7 +3,7 @@
 ## Table of Contents
 
 1. **Project Overview**
-1.1**Objectives**
+   1.1 **Objectives**
 2. **Project Steps and Commands**
    - 2.1 [Go to VPC Page](#21-go-to-vpc-page)
    - 2.2 [Create VPC](#22-create-vpc)
@@ -26,13 +26,31 @@ This document provides a step-by-step guide to setting up an AWS Virtual Private
 
 ## 1.1 Objectives
 The objective of this project is to **design and deploy a custom AWS VPC** that meets the following requirements:
-- Create a private and public subnet to isolate internal and external resources.
-- Establish secure internet access using an **Internet Gateway (IGW)** for public resources.
-- Enable secure outbound traffic for private subnets using a **NAT Gateway**.
-- Set up proper **Route Tables** to ensure correct network traffic flow.
-- Implement **VPC Peering** to allow communication between two different VPCs.
 
-By following this guide, users will gain hands-on experience in AWS networking, which is essential for cloud infrastructure management and security best practices.
+### Purpose
+- The goal of this project is to build a secure and scalable **AWS Virtual Private Cloud (VPC)** that ensures efficient communication between public and private resources while maintaining high security standards.
+
+### Requirements
+- Implement a VPC with both **public and private subnets**.
+- Deploy an **Internet Gateway (IGW)** to provide internet access to public-facing resources.
+- Configure a **NAT Gateway** to allow private subnets to securely access external networks.
+- Establish **Route Tables** that define network traffic flow.
+- Set up **VPC Peering** to enable connectivity between multiple VPCs.
+- Follow AWS best practices for security and performance optimization.
+
+### Use Case
+- This VPC architecture is ideal for hosting **web applications, databases, and internal services** that require secure segmentation.
+- Public-facing services, such as web servers, reside in the public subnet, while private resources, such as databases, remain isolated in the private subnet.
+- The **NAT Gateway** ensures that private resources can fetch software updates or communicate externally without being directly exposed to the internet.
+- **VPC Peering** allows multi-VPC environments to share resources securely.
+
+### Performance Goals
+- Ensure **low-latency communication** within the VPC by optimizing routing and subnet placement.
+- Maintain **high availability** by deploying subnets across multiple AWS availability zones.
+- Improve **security and compliance** by applying AWS security groups and network ACLs effectively.
+- Optimize **cost efficiency** by using appropriate AWS resource allocation strategies.
+
+By following this guide, users will gain practical knowledge in AWS networking, which is essential for cloud security and efficient resource allocation.
 
 ## 2. Project Steps and Commands
 
@@ -101,7 +119,4 @@ By following this guide, users will gain hands-on experience in AWS networking, 
 **Solution:**
 - Verify NAT Gateway is correctly attached to the correct public subnet.
 - Ensure route tables for private subnets route traffic via the NAT Gateway.
-
----
-
 
