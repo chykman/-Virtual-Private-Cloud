@@ -3,6 +3,7 @@
 ## Table of Contents
 
 1. **Project Overview**
+1.1**Objectives**
 2. **Project Steps and Commands**
    - 2.1 [Go to VPC Page](#21-go-to-vpc-page)
    - 2.2 [Create VPC](#22-create-vpc)
@@ -22,6 +23,16 @@
 
 ## 1. Project Overview
 This document provides a step-by-step guide to setting up an AWS Virtual Private Cloud (VPC) with subnets, an internet gateway, a NAT gateway, and VPC peering. The guide includes images for reference.
+
+## 1.1 Objectives
+The objective of this project is to **design and deploy a custom AWS VPC** that meets the following requirements:
+- Create a private and public subnet to isolate internal and external resources.
+- Establish secure internet access using an **Internet Gateway (IGW)** for public resources.
+- Enable secure outbound traffic for private subnets using a **NAT Gateway**.
+- Set up proper **Route Tables** to ensure correct network traffic flow.
+- Implement **VPC Peering** to allow communication between two different VPCs.
+
+By following this guide, users will gain hands-on experience in AWS networking, which is essential for cloud infrastructure management and security best practices.
 
 ## 2. Project Steps and Commands
 
